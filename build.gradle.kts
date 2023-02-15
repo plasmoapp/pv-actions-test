@@ -12,6 +12,7 @@ plugins {
     alias(libs.plugins.idea.ext)
 
     kotlin("jvm") version "1.6.10"
+    id("gg.essential.multi-version.root") apply false
 }
 
 subprojects {
@@ -103,11 +104,9 @@ allprojects {
         mavenLocal()
         mavenCentral()
 
-        maven { url = uri("https://oss.sonatype.org/content/repositories/snapshots") }
-        maven {
-            name = "papermc"
-            url = uri("https://repo.papermc.io/repository/maven-public/")
-        }
+        maven("https://repo.plo.su")
+        maven("https://oss.sonatype.org/content/repositories/snapshots")
+        maven("https://repo.papermc.io/repository/maven-public/")
     }
 }
 
