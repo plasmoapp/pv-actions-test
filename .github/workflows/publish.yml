@@ -44,3 +44,5 @@ jobs:
         # You don't need this section if you don't want to publish
         # your assets to GitHub
         github-token: ${{ secrets.GITHUB_TOKEN }}
+        github-generate-changelog: false
+        github-prerelease: true
