@@ -23,12 +23,12 @@ jobs:
         settings-path: ${{ github.workspace }} # location for the settings.xml file
 
     - name: Build with Gradle
-      uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
+      uses: gradle/gradle-build-action@v2
       with:
         arguments: build
 
-    - uses: Kir-Antipov/mc-publish@v3.2
     - name: Publish
+      uses: Kir-Antipov/mc-publish@v3.2
       with:
         # You don't need this section if you don't want to publish
         # your assets to Modrinth
