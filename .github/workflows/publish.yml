@@ -29,7 +29,7 @@ jobs:
         arguments: build
 
     - name: Publish
-      uses: Kir-Antipov/mc-publish@v3.2
+      uses: Apehum/mc-publish@v1.0
       with:
         # You don't need this section if you don't want to publish
         # your assets to Modrinth
@@ -43,6 +43,8 @@ jobs:
 
         # You don't need this section if you don't want to publish
         # your assets to GitHub
+        split-releases: true
+        files-primary: build/libs/*-@(forge|fabric)-*.jar
         github-token: ${{ secrets.GITHUB_TOKEN }}
         github-generate-changelog: false
         github-prerelease: true
