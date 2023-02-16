@@ -43,6 +43,7 @@ jobs:
 
         # You don't need this section if you don't want to publish
         # your assets to GitHub
+        name: 'Plasmo Voice'
         split-releases: true
         files-primary: build/libs/*-@(forge|fabric)-*.jar
         github-token: ${{ secrets.GITHUB_TOKEN }}
